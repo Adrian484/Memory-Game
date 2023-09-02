@@ -28,8 +28,14 @@ function createCards() {
         inner.classList.add('inner');
         card.appendChild(inner);
 
-        card.dataset.color = colors[i];
-        inner.style.backgroundColor = colors[i];
+        const front = document.createElement('div');
+        front.classList.add('front');
+        inner.appendChild(front);
+
+        const back = document.createElement('div');
+        back.classList.add('back');
+        back.style.backgroundColor = colors[i];
+        inner.appendChild(back);
 
         card.addEventListener('click', () => {
             if (!card.classList.contains('flipped') && flippedCards.length < 2) {
@@ -47,7 +53,7 @@ function createCards() {
 // Check if the flipped cards match
 function checkForMatch() {
     const [card1, card2] = flippedCards;
-    if (card1.dataset.color === card2.dataset.color) {
+    if (card1.querySelector('.back').style.backgroundColor === card2.querySelector('.back').style.backgroundColor) {
         matchedCards.push(card1, card2);
         flippedCards = [];
 
