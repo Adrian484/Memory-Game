@@ -22,9 +22,14 @@ function createCards() {
     for (let i = 0; i < colors.length; i++) {
         const card = document.createElement('div');
         card.classList.add('card');
-        card.style.backgroundColor = colors[i];
-        card.dataset.color = colors[i];
         memoryGame.appendChild(card);
+
+        const inner = document.createElement('div');
+        inner.classList.add('inner');
+        card.appendChild(inner);
+
+        card.dataset.color = colors[i];
+        inner.style.backgroundColor = colors[i];
 
         card.addEventListener('click', () => {
             if (!card.classList.contains('flipped') && flippedCards.length < 2) {
