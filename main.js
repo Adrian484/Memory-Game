@@ -6,7 +6,11 @@ const colors = [
 const memoryGame = document.querySelector('.memory-game');
 const newGameButton = document.getElementById('newGameButton');
 const winCounter = document.getElementById('winCounter');
+const correctPairCounter = document.getElementById('correctPairCounter');
+const incorrectPairCounter = document.getElementById('incorrectPairCounter');
 let gamesWon = 0;
+let correctPairs = 0;
+let incorrectPairs = 0;
 let flippedCards = [];
 let matchedCards = [];
 
@@ -65,11 +69,17 @@ function checkForMatch() {
             winCounter.textContent = `Games Won: ${gamesWon}`;
             winMessage.style.display = 'block';
         }
+
+        correctPairs++;
+        correctPairCounter.textContent = `Correct Pairs: ${correctPairs}`;
     } else {
         setTimeout(() => {
             card1.classList.remove('flipped');
             card2.classList.remove('flipped');
             flippedCards = [];
+
+            incorrectPairs++;
+            incorrectPairCounter.textContent = `Incorrect Pairs: ${incorrectPairs}`;
         }, 1000);
     }
 }
