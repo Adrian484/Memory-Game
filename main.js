@@ -5,6 +5,8 @@ const colors = [
 
 const memoryGame = document.querySelector('.memory-game');
 const newGameButton = document.getElementById('newGameButton');
+const winCounter = document.getElementById('winCounter');
+let gamesWon = 0;
 let flippedCards = [];
 let matchedCards = [];
 
@@ -59,6 +61,8 @@ function checkForMatch() {
         flippedCards = [];
 
         if (matchedCards.length === colors.length) {
+            gamesWon++;
+            winCounter.textContent = `Games Won: ${gamesWon}`;
             winMessage.style.display = 'block';
         }
     } else {

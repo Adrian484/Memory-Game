@@ -1,9 +1,10 @@
 body {
-    background-color: grey;
+    background-color: brown;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
+
 
 .hidden {
     display: none;
@@ -20,19 +21,39 @@ body {
 
 .memory-game-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between; /* Spread elements horizontally */
+    align-items: center; /* Center vertically */
     min-height: 100vh;
     background-color: grey;
+    max-width: 800px; /* Set a max width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /
+}
+
+#newGameButton {
+    font-size: 24px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    margin-left: 50px;
+}
+
+#winCounter {
+    font-size: 24px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-right: 50px;
 }
 
 .memory-game {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     max-width: 400px;
     width: 100%; /* Add this line to limit the width */
-    padding: 0 20px; /* Add this line for spacing on both sides */
+    padding: 0 200px; /* Add this line for spacing on both sides */
 }
 
 .card {
