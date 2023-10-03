@@ -1,5 +1,16 @@
 body {
     background-color: grey;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.memory-game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: grey;
 }
 
 .memory-game {
@@ -7,7 +18,8 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     max-width: 400px;
-    margin: 0 auto;
+    width: 100%; /* Add this line to limit the width */
+    padding: 0 20px; /* Add this line for spacing on both sides */
 }
 
 .card {
