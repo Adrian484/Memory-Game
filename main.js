@@ -4,6 +4,7 @@ const colors = [
 ];
 
 const memoryGame = document.querySelector('.memory-game');
+const newGameButton = document.getElementById('newGameButton');
 let flippedCards = [];
 let matchedCards = [];
 
@@ -68,5 +69,17 @@ function checkForMatch() {
         }, 1000);
     }
 }
+
+newGameButton.addEventListener('click', () => {
+
+    while (memoryGame.firstChild) {
+        memoryGame.removeChild(memoryGame.firstChild);
+    }
+
+    matchedCards = [];
+    flippedCards = [];
+
+    createCards();
+});
 
 createCards();
