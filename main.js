@@ -59,7 +59,7 @@ function checkForMatch() {
         flippedCards = [];
 
         if (matchedCards.length === colors.length) {
-            alert('Congratulations! You won!');
+            winMessage.style.display = 'block';
         }
     } else {
         setTimeout(() => {
@@ -78,6 +78,7 @@ newGameButton.addEventListener('click', () => {
 
     matchedCards = [];
     flippedCards = [];
+    winMessage.style.display = 'none';
 
     createCards();
 });

@@ -5,6 +5,19 @@ body {
     min-height: 100vh;
 }
 
+.hidden {
+    display: none;
+    text-align: center;
+    font-size: 36px; /* Adjust the font size as needed */
+    position: absolute; /* Position the message */
+    top: 100px; /* Adjust the top position as needed */
+    left: 80px; /* Center the message horizontally */
+    right: 0; /* Center the message horizontally */
+    margin: 0 auto; /* Center the message horizontally */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
 .memory-game-container {
     display: flex;
     justify-content: center;
@@ -57,3 +70,4 @@ body {
 .card.flipped .inner {
     transform: rotateY(180deg);
 }
+
