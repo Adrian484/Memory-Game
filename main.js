@@ -97,4 +97,24 @@ newGameButton.addEventListener('click', () => {
     createCards();
 });
 
+resetAllButton.addEventListener('click', () => {
+    while (memoryGame.firstChild) {
+        memoryGame.removeChild(memoryGame.firstChild);
+    }
+
+    matchedCards = [];
+    flippedCards = [];
+    winMessage.style.display = 'none';
+    gamesWon = 0;
+    correctPairs = 0;
+    incorrectPairs = 0;
+
+    winCounter.textContent = 'Games Won: 0';
+    correctPairCounter.textContent = 'Correct Pairs: 0';
+    incorrectPairCounter.textContent = 'Incorrect Pairs: 0';
+
+    createCards();
+});
+
 createCards();
+
