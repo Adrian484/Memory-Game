@@ -107,8 +107,16 @@ body {
     justify-content: center;
     align-items: center;
     backface-visibility: hidden;
-    background-color: white; /* Front side color */
 }
+
+.card .inner .front {
+
+    background-image: url('images/Memory Game.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 .card .inner .back {
     transform: rotateY(180deg);
