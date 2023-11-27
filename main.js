@@ -1,7 +1,7 @@
 // Hard coded colours that will always appear but in random places on the board each load
 const colors = [
-    'red', 'blue', 'white', 'yellow', 'orange', 'purple', 'pink', 'cyan',
-    'red', 'blue', 'white', 'yellow', 'orange', 'purple', 'pink', 'cyan'
+    'red', 'blue', 'white', 'yellow', 'orange', 'purple', 'hotpink', 'cyan',
+    'red', 'blue', 'white', 'yellow', 'orange', 'purple', 'hotpink', 'cyan'
 ];
 
 const memoryGame = document.querySelector('.memory-game');
